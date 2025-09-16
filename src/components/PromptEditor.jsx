@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { Edit3, Copy, RotateCcw, Sparkles, Info, CheckCircle } from 'lucide-react';
 
 /**
  * Componente para editar prompts seleccionados o crear nuevos
  */
-export const PromptEditor = ({ 
-  initialPrompt = '', 
+export const PromptEditor = ({
+  initialPrompt = '',
   selectedCase = null,
   onPromptChange,
   onPromptSave,
-  disabled = false 
+  disabled = false
 }) => {
   const [prompt, setPrompt] = useState(initialPrompt);
   const [originalPrompt, setOriginalPrompt] = useState(initialPrompt);
@@ -106,7 +107,7 @@ export const PromptEditor = ({
             </span>
           )}
         </div>
-        
+
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowTips(!showTips)}
@@ -125,21 +126,8 @@ export const PromptEditor = ({
             <Sparkles className="w-5 h-5 text-purple-600 mt-0.5" />
             <div>
               <h4 className="font-medium text-purple-900 mb-1">
-                Prompt basado en: {selectedCase.title}
+                Prompt basado en: {selectedCase.name}
               </h4>
-              <p className="text-sm text-purple-700">
-                Creado por @{selectedCase.author} • Caso #{selectedCase.number}
-              </p>
-              <div className="flex flex-wrap gap-1 mt-2">
-                {selectedCase.tags.map((tag, index) => (
-                  <span 
-                    key={index}
-                    className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -250,7 +238,7 @@ export const PromptEditor = ({
         <div className="mt-4 p-3 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-medium text-gray-700 mb-2">Vista previa:</h4>
           <p className="text-sm text-gray-600 italic">
-            "{prompt}"
+            &quot;{prompt}&quot;
           </p>
         </div>
       )}
