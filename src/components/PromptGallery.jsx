@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Tag, Image, Sparkles } from 'lucide-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { usePromptSelection } from '../hooks/usePromptSelection';
 
@@ -38,10 +40,12 @@ export const PromptGallery = ({ onPromptSelect, onCaseSelect }) => {
       {/* Imagen de preview */}
       <div className="relative h-48 overflow-hidden rounded-t-xl">
         {caseItem.imagenes.length > 0 ? (
-          <img
+          <LazyLoadImage
             src={caseItem.imagenes[0].input ?? caseItem.imagenes[0].output}
             alt={`Input for ${caseItem.name}`}
             className="w-full h-full object-cover"
+            effect="blur"
+            placeholder={<div className="w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"></div>}
             onError={(e) => {
               e.target.src = '/placeholder-image.jpg';
             }}
@@ -157,10 +161,12 @@ export const PromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                 <div>
                   <h4 className="font-semibold mb-2">Imagen de Entrada</h4>
                   {selectedCase.imagenes.length > 0 ? (
-                    <img
+                    <LazyLoadImage
                       src={selectedCase.imagenes[0].input}
                       alt="Input"
                       className="w-full rounded-lg"
+                      effect="blur"
+                      placeholder={<div className="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center"></div>}
                     />
                   ) : (
                     <div className="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -171,10 +177,12 @@ export const PromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                 <div>
                   <h4 className="font-semibold mb-2">Resultado Esperado</h4>
                   {selectedCase.outputs.length > 0 ? (
-                    <img
+                    <LazyLoadImage
                       src={selectedCase.imagenes[0].output}
                       alt="Output"
                       className="w-full rounded-lg"
+                      effect="blur"
+                      placeholder={<div className="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center"></div>}
                     />
                   ) : (
                     <div className="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center">

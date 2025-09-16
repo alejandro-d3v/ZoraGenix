@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { usePromptExploration } from '../hooks/usePromptExploration';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 // Componente para mostrar una tarjeta de caso individual
 const CaseCard = ({ caseItem, onSelect }) => {
@@ -8,44 +11,46 @@ const CaseCard = ({ caseItem, onSelect }) => {
       {/* Imagen de vista previa si existe */}
       {caseItem.outputs && caseItem.outputs.length > 0 && (
         <div className="h-48 bg-gray-200 overflow-hidden">
-          <img 
-            src={caseItem.outputs[0].path} 
+          <LazyLoadImage
+            src={caseItem.outputs[0].path}
             alt={caseItem.title}
             className="w-full h-full object-cover"
+            effect="blur"
+            placeholder={<div className="w-full h-full bg-gray-300 animate-pulse"></div>}
             onError={(e) => {
               e.target.style.display = 'none';
             }}
           />
         </div>
       )}
-      
+
       <div className="p-4">
         {/* Título en español */}
         <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
           {caseItem.title}
         </h3>
-        
+
         {/* Autor */}
         <p className="text-sm text-gray-600 mb-2">
           Por: <span className="font-medium">{caseItem.author}</span>
         </p>
-        
+
         {/* Categoría */}
         <div className="mb-3">
           <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
             {caseItem.category}
           </span>
         </div>
-        
+
         {/* Vista previa del prompt en español */}
         <p className="text-sm text-gray-700 mb-3 line-clamp-3">
           {caseItem.prompt}
         </p>
-        
+
         {/* Tags */}
         <div className="flex flex-wrap gap-1 mb-3">
           {caseItem.tags.slice(0, 3).map((tag, index) => (
-            <span 
+            <span
               key={index}
               className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"
             >
@@ -58,13 +63,13 @@ const CaseCard = ({ caseItem, onSelect }) => {
             </span>
           )}
         </div>
-        
+
         {/* Información de imágenes */}
         <div className="flex justify-between items-center text-xs text-gray-500 mb-3">
           <span>📥 {caseItem.inputs.length} entrada(s)</span>
           <span>📤 {caseItem.outputs.length} salida(s)</span>
         </div>
-        
+
         {/* Botón de selección */}
         <button
           onClick={() => onSelect(caseItem)}
@@ -82,7 +87,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const getPageNumbers = () => {
     const pages = [];
     const maxVisible = 5;
-    
+
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
@@ -104,7 +109,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         pages.push(totalPages);
       }
     }
-    
+
     return pages;
   };
 
@@ -117,7 +122,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       >
         Anterior
       </button>
-      
+
       {getPageNumbers().map((page, index) => (
         <button
           key={index}
@@ -134,7 +139,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           {page}
         </button>
       ))}
-      
+
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
@@ -248,7 +253,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
-          
+
           {/* Filtro por categoría */}
           <div className="md:w-64">
             <select
@@ -264,7 +269,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
               ))}
             </select>
           </div>
-          
+
           {/* Modo de vista */}
           <div className="flex border border-gray-300 rounded-lg overflow-hidden">
             <button
@@ -281,7 +286,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
             </button>
           </div>
         </div>
-        
+
         {/* Botón para limpiar filtros */}
         {(searchQuery || selectedCategory) && (
           <div className="flex justify-between items-center">
@@ -302,8 +307,8 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
       {cases.length > 0 ? (
         <>
           <div className={`grid gap-6 ${
-            viewMode === 'grid' 
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
+            viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
               : 'grid-cols-1'
           }`}>
             {cases.map(caseItem => (
@@ -314,7 +319,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
               />
             ))}
           </div>
-          
+
           {/* Paginación */}
           {totalPages > 1 && (
             <Pagination
@@ -355,7 +360,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                   ✕
                 </button>
               </div>
-              
+
               {/* Contenido del modal */}
               <div className="space-y-6">
                 {/* Descripción */}
@@ -363,7 +368,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                   <h4 className="font-semibold text-gray-800 mb-2">Descripción:</h4>
                   <p className="text-gray-700">{selectedCase.description}</p>
                 </div>
-                
+
                 {/* Prompt en español */}
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Prompt:</h4>
@@ -371,7 +376,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                     <p className="text-gray-800">{selectedCase.prompt}</p>
                   </div>
                 </div>
-                
+
                 {/* Tags y categoría */}
                 <div className="flex flex-wrap gap-4">
                   <div>
@@ -384,7 +389,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                     <h4 className="font-semibold text-gray-800 mb-2">Tags:</h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedCase.tags.map((tag, index) => (
-                        <span 
+                        <span
                           key={index}
                           className="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm"
                         >
@@ -394,7 +399,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Imágenes de ejemplo */}
                 {(selectedCase.inputs.length > 0 || selectedCase.outputs.length > 0) && (
                   <div>
@@ -405,11 +410,13 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                           <h5 className="text-sm font-medium text-gray-600 mb-2">Imágenes de entrada:</h5>
                           <div className="space-y-2">
                             {selectedCase.inputs.map((input, index) => (
-                              <img
+                              <LazyLoadImage
                                 key={index}
                                 src={input.path}
                                 alt={`Entrada ${index + 1}`}
                                 className="w-full h-48 object-cover rounded-lg"
+                                effect="blur"
+                                placeholder={<div className="w-full h-48 bg-gray-300 animate-pulse rounded-lg"></div>}
                                 onError={(e) => {
                                   e.target.style.display = 'none';
                                 }}
@@ -418,17 +425,19 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                           </div>
                         </div>
                       )}
-                      
+
                       {selectedCase.outputs.length > 0 && (
                         <div>
                           <h5 className="text-sm font-medium text-gray-600 mb-2">Imágenes de salida:</h5>
                           <div className="space-y-2">
                             {selectedCase.outputs.map((output, index) => (
-                              <img
+                              <LazyLoadImage
                                 key={index}
                                 src={output.path}
                                 alt={`Salida ${index + 1}`}
                                 className="w-full h-48 object-cover rounded-lg"
+                                effect="blur"
+                                placeholder={<div className="w-full h-48 bg-gray-300 animate-pulse rounded-lg"></div>}
                                 onError={(e) => {
                                   e.target.style.display = 'none';
                                 }}
@@ -440,7 +449,7 @@ export const PaginatedPromptGallery = ({ onPromptSelect, onCaseSelect }) => {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Acciones */}
                 <div className="flex gap-4 pt-4 border-t">
                   <button

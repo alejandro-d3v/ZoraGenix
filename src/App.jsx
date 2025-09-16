@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useApiConnection } from './hooks/useApiConnection';
 import { useImageUpload } from './hooks/useImageUpload';
@@ -94,7 +95,7 @@ function App() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">ZoraGenix</h1>
-                <p className="text-sm text-gray-500">Editor de Fotos con IA v1.1</p>
+                <p className="text-sm text-gray-500">Editor de Fotos con IA v1.2</p>
               </div>
             </div>
 
@@ -105,7 +106,7 @@ function App() {
                 </div>
               )}
               <div className="text-sm text-gray-600">
-                v1.1.0
+                v1.2.0
               </div>
             </div>
           </div>
@@ -324,7 +325,7 @@ function App() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    ¡Bienvenido a ZoraGenix v1.1!
+                    ¡Bienvenido a ZoraGenix v1.2!
                   </h3>
                   <p className="text-gray-600 mb-6 max-w-md mx-auto">
                     {selectedPrompt
