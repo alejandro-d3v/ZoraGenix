@@ -10,10 +10,14 @@ import PromptInput from './components/PromptInput';
 import LoadingSpinner from './components/LoadingSpinner';
 import ResultPanel from './components/ResultPanel';
 import MetadataPanel from './components/MetadataPanel';
+import { PromptGallery } from './components/PromptGallery';
+import { PromptEditor } from './components/PromptEditor';
 
 function App() {
   const [activeTab, setActiveTab] = useState('generate');
-  
+  const [selectedPrompt, setSelectedPrompt] = useState('');
+  const [selectedCase, setSelectedCase] = useState(null);
+
   // Hooks personalizados
   const {
     apiKey,
@@ -54,6 +58,26 @@ function App() {
   const handleClearAll = () => {
     clearImage();
     clearGeneration();
+    setSelectedPrompt('');
+    setSelectedCase(null);
+  };
+
+  // Manejar selección de prompt desde la galería
+  const handlePromptSelect = (prompt) => {
+    setSelectedPrompt(prompt);
+    setActiveTab('generate'); // Cambiar a la pestaña de generación
+  };
+
+  // Manejar selección de caso desde la galería
+  const handleCaseSelect = (caseItem) => {
+    setSelectedCase(caseItem);
+    setSelectedPrompt(caseItem.prompt);
+    setActiveTab('generate'); // Cambiar a la pestaña de generación
+  };
+
+  // Manejar cambio de prompt en el editor
+  const handlePromptChange = (newPrompt) => {
+    setSelectedPrompt(newPrompt);
   };
 
   return (
@@ -70,13 +94,18 @@ function App() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">ZoraGenix</h1>
-                <p className="text-sm text-gray-500">Editor de Fotos con IA</p>
+                <p className="text-sm text-gray-500">Editor de Fotos con IA v1.1</p>
               </div>
             </div>
-            
+
             <div className="flex items-center space-x-4">
+              {selectedCase && (
+                <div className="text-sm text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
+                  Usando: {selectedCase.title}
+                </div>
+              )}
               <div className="text-sm text-gray-600">
-                v1.0.0
+                v1.1.0
               </div>
             </div>
           </div>
@@ -98,6 +127,19 @@ function App() {
                 }`}
               >
                 Generar / Editar
+              </button>
+              <button
+                onClick={() => setActiveTab('prompts')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'prompts'
+                    ? 'border-primary-500 text-primary-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Exploración de Prompts
+                <span className="ml-2 bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-medium">
+                  Nuevo
+                </span>
               </button>
               <button
                 onClick={() => setActiveTab('settings')}
@@ -127,6 +169,13 @@ function App() {
           </div>
         )}
 
+        {activeTab === 'prompts' && (
+          <PromptGallery
+            onPromptSelect={handlePromptSelect}
+            onCaseSelect={handleCaseSelect}
+          />
+        )}
+
         {activeTab === 'generate' && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Columna izquierda - Controles */}
@@ -148,6 +197,16 @@ function App() {
                     <span className="text-sm">No configurada</span>
                   </div>
                 </div>
+              )}
+
+              {/* Editor de prompt */}
+              {(selectedPrompt || selectedCase) && (
+                <PromptEditor
+                  initialPrompt={selectedPrompt}
+                  selectedCase={selectedCase}
+                  onPromptChange={handlePromptChange}
+                  disabled={isGenerating}
+                />
               )}
 
               {/* Carga de imagen */}
@@ -174,21 +233,39 @@ function App() {
                 isGenerating={isGenerating}
                 hasImage={!!uploadedImage}
                 isConnected={isConnected}
+                initialPrompt={selectedPrompt}
+                onPromptChange={setSelectedPrompt}
               />
 
-              {/* Botón limpiar todo */}
-              {(uploadedImage || generatedImage) && (
-                <button
-                  onClick={handleClearAll}
-                  className="btn-secondary w-full"
-                  disabled={isGenerating}
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                  Limpiar Todo
-                </button>
-              )}
+              {/* Acciones rápidas */}
+              <div className="flex gap-2">
+                {!selectedPrompt && (
+                  <button
+                    onClick={() => setActiveTab('prompts')}
+                    className="btn-secondary flex-1 text-sm"
+                    disabled={isGenerating}
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    Explorar Prompts
+                  </button>
+                )}
+
+                {/* Botón limpiar todo */}
+                {(uploadedImage || generatedImage || selectedPrompt) && (
+                  <button
+                    onClick={handleClearAll}
+                    className="btn-secondary flex-1 text-sm"
+                    disabled={isGenerating}
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    Limpiar Todo
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Columna derecha - Resultados */}
@@ -247,51 +324,43 @@ function App() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    ¡Bienvenido a ZoraGenix!
+                    ¡Bienvenido a ZoraGenix v1.1!
                   </h3>
                   <p className="text-gray-600 mb-6 max-w-md mx-auto">
-                    {isConnected 
-                      ? "Carga una imagen para editarla o escribe un prompt para generar una nueva imagen con IA."
-                      : "Configura tu API Key para comenzar a generar imágenes increíbles con inteligencia artificial."
+                    {selectedPrompt
+                      ? 'Tienes un prompt seleccionado. Sube una imagen y genera tu creación.'
+                      : 'Crea imágenes increíbles con IA. Sube una imagen, escribe un prompt o explora nuestra galería de prompts predefinidos.'
                     }
                   </p>
-                  {!isConnected && (
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    {!selectedPrompt && (
+                      <button
+                        onClick={() => setActiveTab('prompts')}
+                        className="btn-primary"
+                      >
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                        Explorar Prompts
+                      </button>
+                    )}
                     <button
                       onClick={() => setActiveTab('settings')}
-                      className="btn-primary"
+                      className={selectedPrompt ? 'btn-primary' : 'btn-secondary'}
                     >
-                      Configurar API Key
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {isConnected ? 'Configuración' : 'Configurar API Key'}
                     </button>
-                  )}
+                  </div>
                 </div>
               )}
             </div>
           </div>
         )}
       </main>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <p className="text-sm text-gray-500">
-              © 2024 ZoraGenix. Potenciado por Gemini 2.5 Flash Image Preview.
-            </p>
-            <div className="flex items-center space-x-4 text-sm text-gray-500">
-              <span>Versión 1.0.0</span>
-              <span>•</span>
-              <a 
-                href="https://ai.google.dev/gemini-api/docs/image-generation" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary-600"
-              >
-                Documentación API
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

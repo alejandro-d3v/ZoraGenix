@@ -1,0 +1,1110 @@
+[
+  {
+    "id": "case 1",
+    "name": "Illustration to Figure",
+    "input": "Subir una imagen de referencia como objeto para generar la figura",
+    "prompt": "turn this photo into a character figure. Behind it, place a box with the character's image printed on it, and a computer showing the Blender modeling process on its screen. In front of the box, add a round plastic base with the character figure standing on it. set the scene indoors if possible",
+    "prompt_es": "convierte esta foto en una figura de personaje. Detrás, coloca una caja con la imagen del personaje impresa, y una computadora mostrando en pantalla el proceso de modelado en Blender. Frente a la caja, agrega una base plástica redonda con la figura del personaje de pie sobre ella. configura la escena en interiores si es posible",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case1/input0.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case1/output0.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 4",
+    "name": "Extract 3D Buildings/Make Isometric Models",
+    "input": "Subir una imagen que contenga el objeto correspondiente",
+    "prompt": "Make Image Daytime and Isometric [Building Only]",
+    "prompt_es": "Haz la imagen de día y en vista isométrica [solo edificio]",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case4/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case4/output.jpg"
+      },
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case4/input2.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case4/output2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 5",
+    "name": "Photos of Yourself in Different Eras",
+    "input": "Subir una foto de una persona",
+    "prompt": "Change the characer's style to [1970]'s classical [male] style\n\nAdd [long curly] hair, \n[long mustache], \nchange the background to the iconic [californian summer landscape]\n\nDon't change the character's face",
+    "prompt_es": "Cambia el estilo del personaje al estilo clásico [masculino] de los [años 70]\n\nAgrega [cabello largo y rizado], \n[bigote largo], \ncambia el fondo al icónico [paisaje californiano de verano]\n\nNo cambies el rostro del personaje",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case5/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case5/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 6",
+    "name": "Multi-Reference Image Generation",
+    "input": "Subir múltiples imágenes de referencia",
+    "prompt": "A model is posing and leaning against a pink bmw. She is wearing the following items, the scene is against a light grey background. The green alien is a keychain and it's attached to the pink handbag. The model also has a pink parrot on her shoulder. There is a pug sitting next to her wearing a pink collar and gold headphones.",
+    "prompt_es": "Una modelo posa recostada contra un BMW rosado. Ella lleva los siguientes objetos, la escena es con fondo gris claro. El alien verde es un llavero y está sujeto al bolso rosa. La modelo también tiene un loro rosado en el hombro. Hay un pug sentado junto a ella con un collar rosado y auriculares dorados.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case6/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case6/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 7",
+    "name": "Automatic Photo Editing",
+    "input": "Subir una imagen que necesite corrección",
+    "prompt": "This photo is very boring and plain. Enhance it! Increase the contrast, boost the colors, and improve the lighting to make it richer,You can crop and delete details that affect the composition.",
+    "prompt_es": "Esta foto es muy aburrida y simple. ¡Mejóralo! Aumenta el contraste, realza los colores y mejora la iluminación para hacerla más rica. Puedes recortar y eliminar detalles que afecten la composición.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case7/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case7/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 8",
+    "name": "Hand Drawing Controls Multi-Character Poses",
+    "input": "Subir imágenes de personajes y bocetos dibujados a mano",
+    "prompt": "Have these two characters fight using the pose from Figure 3. Add appropriate visual backgrounds and scene interactions,Generated image ratio is 16:9",
+    "prompt_es": "Haz que estos dos personajes peleen usando la pose de la Figura 3. Agrega fondos visuales apropiados e interacciones de escena, la imagen generada debe tener proporción 16:9",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case8/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case8/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 9",
+    "name": "Cross-View Image Generation",
+    "input": "Subir una foto tomada desde el suelo",
+    "prompt": "Convert the photo to a top-down view and mark the location of the photographer.",
+    "prompt_es": "Convierte la foto en una vista cenital y marca la ubicación del fotógrafo.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case9/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case9/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 10",
+    "name": "Custom Character Stickers",
+    "input": "Subir una imagen de referencia de sticker y una imagen de personaje",
+    "prompt": "Help me turn the character into a white outline sticker similar to Figure 2. The character needs to be transformed into a web illustration style, and add a playful white outline short phrase describing Figure 1.",
+    "prompt_es": "Ayúdame a convertir el personaje en una pegatina con contorno blanco similar a la Figura 2. El personaje debe transformarse en un estilo de ilustración web, y agregar una frase corta y divertida en contorno blanco describiendo la Figura 1.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case10/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case10/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 11",
+    "name": "Anime to Real Coser",
+    "input": "Subir una imagen de ilustración",
+    "prompt": "Generate a photo of a girl cosplaying this illustration, with the background set at Comiket",
+    "prompt_es": "Genera una foto de una chica haciendo cosplay de esta ilustración, con el fondo ambientado en Comiket",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case11/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case11/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 12",
+    "name": "Generate Character Design",
+    "input": "Subir una imagen de referencia de personaje",
+    "prompt": "Generate character design for me (Character Design)\n\nProportion design (different height comparisons, head-to-body ratio, etc.)\n\nThree views (front, side, back)\n\nExpression design (Expression Sheet) → like the image you sent\n\nPose design (Pose Sheet) → various common poses\n\nCostume design (Costume Design)",
+    "prompt_es": "Genera un diseño de personaje para mí (Diseño de personaje)\n\nDiseño de proporciones (comparación de diferentes alturas, proporción cabeza-cuerpo, etc.)\n\nTres vistas (frontal, lateral, trasera)\n\nDiseño de expresiones (hoja de expresiones) → como la imagen que enviaste\n\nDiseño de poses (hoja de poses) → varias poses comunes\n\nDiseño de vestuario (diseño de vestuario)",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case12/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case12/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 13",
+    "name": "Color Line Art with Color Palette",
+    "input": "Subir una imagen de line art y una paleta de colores",
+    "prompt": "Accurately use the color palette from Figure 2 to color the character in Figure 1",
+    "prompt_es": "Usa con precisión la paleta de colores de la Figura 2 para colorear el personaje de la Figura 1",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case13/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case13/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 14",
+    "name": "Article Infographic",
+    "input": "Subir un artículo o entrada de blog",
+    "prompt": "Generate an infographic for the article content\nRequirements:\n1. Translate the content into English and extract key information from the article\n2. Keep the content in the image concise, only retaining the main title\n3. Use English text in the image\n4. Add rich and cute cartoon characters and elements",
+    "prompt_es": "Genera una infografía para el contenido del artículo\nRequisitos:\n1. Traduce el contenido al inglés y extrae la información clave del artículo\n2. Mantén el contenido en la imagen conciso, solo conservando el título principal\n3. Usa texto en inglés en la imagen\n4. Agrega personajes y elementos de dibujos animados ricos y lindos",
+    "imagenes": [
+      {
+        "input": null,
+        "output": "public/Awesome-Nano-Banana-images-main/images/case14/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 15",
+    "name": "Change Multiple Hairstyles",
+    "input": "Subir un retrato que necesite cambios de peinado",
+    "prompt": "Generate avatars of this person with different hairstyles in a 3x3 grid format",
+    "prompt_es": "Genera avatares de esta persona con diferentes peinados en un formato de cuadrícula 3x3",
+    "imagenes": [
+      {
+        "input": null,
+        "output": "public/Awesome-Nano-Banana-images-main/images/case15/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 17",
+    "name": "Custom Marble Sculpture",
+    "input": "Subir una imagen de referencia",
+    "prompt": "A photorealistic image of an ultra-detailed sculpture of the subject in image made of shining marble. The sculpture should display smooth and reflective marble surface, emphasizing its luster and artistic craftsmanship. The design is elegant, highlighting the beauty and depth of marble. The lighting in the image should enhance the sculpture's contours and textures, creating a visually stunning and mesmerizing effect",
+    "prompt_es": "Una imagen fotorrealista de una escultura ultradetallada del sujeto en la imagen hecha de mármol brillante. La escultura debe mostrar una superficie de mármol lisa y reflectante, enfatizando su brillo y artesanía artística. El diseño es elegante, resaltando la belleza y profundidad del mármol. La iluminación en la imagen debe realzar los contornos y texturas de la escultura, creando un efecto visualmente impresionante e hipnótico",
+    "imagenes": [
+      {
+        "input": null,
+        "output": "public/Awesome-Nano-Banana-images-main/images/case17/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 18",
+    "name": "Cook Based on Ingredients",
+    "input": "Subir una foto con varios ingredientes",
+    "prompt": "make me a delicious lunch with these ingredients, and put it on a plate , zoomed in view of the plate, remove the other plates and ingredients.",
+    "prompt_es": "hazme un almuerzo delicioso con estos ingredientes, y colócalo en un plato, vista ampliada del plato, elimina los demás platos e ingredientes.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case18/input1.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case18/output1.jpg"
+      },
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case18/input2.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case18/output2.jpg"
+      },
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case18/input3.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case18/output3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 19",
+    "name": "Math Problem Reasoning",
+    "input": "Subir un problema matemático",
+    "prompt": "Write the answer to the problem in the corresponding position based on the question",
+    "prompt_es": "Escribe la respuesta al problema en la posición correspondiente según la pregunta",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case19/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case19/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 20",
+    "name": "Old Photo Colorization",
+    "input": "Subir una foto antigua que necesite restauración",
+    "prompt": "restore and colorize this photo.",
+    "prompt_es": "restaura y colorea esta foto.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case20/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case20/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 21",
+    "name": "Generate Your Own Little World",
+    "input": "Subir una foto de referencia",
+    "prompt": "Transform the image into a miniature world inside a glass bottle, add small landscapes, characters, and vivid details.",
+    "prompt_es": "Transforma la imagen en un mundo en miniatura dentro de una botella de vidrio, agrega pequeños paisajes, personajes y detalles vívidos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case21/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case21/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 22",
+    "name": "Convert Sketch to Realistic Object",
+    "input": "Subir un dibujo a mano alzada",
+    "prompt": "Turn this sketch into a photorealistic object with proper textures, shadows, and lighting.",
+    "prompt_es": "Convierte este boceto en un objeto fotorrealista con texturas, sombras e iluminación apropiadas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case22/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case22/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 23",
+    "name": "Swap Object Materials",
+    "input": "Subir una imagen de un objeto",
+    "prompt": "Replace the material of the object with [gold]. Preserve its shape and proportions.",
+    "prompt_es": "Reemplaza el material del objeto por [oro]. Conserva su forma y proporciones.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case23/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case23/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 24",
+    "name": "Cartoonify Yourself",
+    "input": "Subir un retrato personal",
+    "prompt": "Turn this portrait into a cartoon version with bold outlines and vibrant colors.",
+    "prompt_es": "Convierte este retrato en una versión de caricatura con contornos marcados y colores vibrantes.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case24/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case24/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 25",
+    "name": "Transform Object into LEGO Model",
+    "input": "Subir una foto de objeto",
+    "prompt": "Recreate the object entirely as a LEGO model with blocky textures and bright plastic look.",
+    "prompt_es": "Recrea el objeto completamente como un modelo LEGO con texturas de bloques y apariencia plástica brillante.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case25/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case25/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 26",
+    "name": "Generate Futuristic Vehicle Concept",
+    "input": "Subir una referencia de vehículo",
+    "prompt": "Design a futuristic version of this vehicle with sleek lines, neon lights, and advanced technology.",
+    "prompt_es": "Diseña una versión futurista de este vehículo con líneas elegantes, luces de neón y tecnología avanzada.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case26/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case26/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 27",
+    "name": "Merge Animals into Hybrid Creature",
+    "input": "Subir imágenes de dos animales",
+    "prompt": "Combine the two animals into a hybrid creature with features of both, seamless and realistic.",
+    "prompt_es": "Combina los dos animales en una criatura híbrida con rasgos de ambos, de manera fluida y realista.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case27/input1.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case27/output.jpg"
+      },
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case27/input2.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case27/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 28",
+    "name": "Generate Album Cover Art",
+    "input": "Subir una referencia musical o temática",
+    "prompt": "Create an artistic album cover inspired by this theme, modern and abstract style.",
+    "prompt_es": "Crea una portada de álbum artística inspirada en este tema, estilo moderno y abstracto.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case28/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case28/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 29",
+    "name": "Food into Fantasy Landscape",
+    "input": "Subir una imagen de comida",
+    "prompt": "Transform the food into a fantasy landscape, with mountains, rivers, and characters made of edible elements.",
+    "prompt_es": "Transforma la comida en un paisaje de fantasía, con montañas, ríos y personajes hechos de elementos comestibles.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case29/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case29/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 30",
+    "name": "Generate Cyberpunk Cityscape",
+    "input": "Subir una imagen de referencia urbana",
+    "prompt": "Generate a cyberpunk-style cityscape at night, full of neon lights, rain, and futuristic atmosphere.",
+    "prompt_es": "Genera un paisaje urbano estilo cyberpunk de noche, lleno de luces de neón, lluvia y atmósfera futurista.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case30/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case30/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 31",
+    "name": "Generate Diorama Model",
+    "input": "Subir una imagen de referencia",
+    "prompt": "Transform the scene into a miniature diorama model inside a display case.",
+    "prompt_es": "Transforma la escena en un modelo de diorama en miniatura dentro de una vitrina.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case31/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case31/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 32",
+    "name": "Convert Statue into Living Character",
+    "input": "Subir una foto de estatua",
+    "prompt": "Turn this statue into a living human character with realistic features and environment.",
+    "prompt_es": "Convierte esta estatua en un personaje humano vivo con rasgos realistas y entorno.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case32/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case32/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 34",
+    "name": "Turn Photo into Pixel Art",
+    "input": "Subir una foto",
+    "prompt": "Convert this photo into pixel art, 16-bit retro game style.",
+    "prompt_es": "Convierte esta foto en arte de píxeles, estilo de videojuego retro de 16 bits.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case34/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case34/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 35",
+    "name": "Product Advertisement Poster",
+    "input": "Subir una foto de producto",
+    "prompt": "Make a commercial advertisement poster of this product, clean layout, bold title, and appealing graphics.",
+    "prompt_es": "Haz un cartel publicitario comercial de este producto, diseño limpio, título llamativo y gráficos atractivos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case35/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case35/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 36",
+    "name": "Transform Architecture Style",
+    "input": "Subir una foto de edificio",
+    "prompt": "Change the architecture style of this building to Gothic cathedral design.",
+    "prompt_es": "Cambia el estilo arquitectónico de este edificio a diseño de catedral gótica.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case36/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case36/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 37",
+    "name": "Fantasy Weapon Design",
+    "input": "Subir un objeto como base",
+    "prompt": "Redesign this object into a fantasy weapon with glowing runes and mythical aura.",
+    "prompt_es": "Rediseña este objeto en un arma de fantasía con runas brillantes y un aura mítica.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case37/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case37/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 38",
+    "name": "Turn Pet into Cartoon Mascot",
+    "input": "Subir una foto de mascota",
+    "prompt": "Transform this pet into a cartoon mascot character, exaggerated and cute style.",
+    "prompt_es": "Transforma esta mascota en un personaje mascota de caricatura, estilo exagerado y tierno.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case38/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case38/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 39",
+    "name": "Generate Board Game Illustration",
+    "input": "Subir un concepto o escena",
+    "prompt": "Illustrate this concept as a board game card with detailed art and fantasy theme.",
+    "prompt_es": "Ilustra este concepto como una carta de juego de mesa con arte detallado y tema de fantasía.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case39/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case39/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 40",
+    "name": "Turn Landscape into Low-Poly Model",
+    "input": "Subir una foto de paisaje",
+    "prompt": "Convert this landscape into a low-poly 3D model render, simple and geometric shapes.",
+    "prompt_es": "Convierte este paisaje en un render de modelo 3D low-poly, con formas simples y geométricas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case40/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case40/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 41",
+    "name": "Turn Portrait into Oil Painting",
+    "input": "Subir un retrato personal",
+    "prompt": "Convert this portrait into a classic oil painting on canvas, rich brushstrokes, baroque style.",
+    "prompt_es": "Convierte este retrato en una pintura al óleo clásica sobre lienzo, pinceladas ricas, estilo barroco.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case41/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case41/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 42",
+    "name": "Product Blueprint Diagram",
+    "input": "Subir una foto de producto",
+    "prompt": "Generate a blueprint diagram of this product, technical drawing style, annotations included.",
+    "prompt_es": "Genera un diagrama de plano técnico de este producto, estilo de dibujo técnico, con anotaciones incluidas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case42/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case42/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 43",
+    "name": "Mythical Creature Illustration",
+    "input": "Subir una foto de animal",
+    "prompt": "Transform this animal into a mythical creature with wings, glowing eyes, and magical aura.",
+    "prompt_es": "Transforma este animal en una criatura mítica con alas, ojos brillantes y un aura mágica.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case43/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case43/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 44",
+    "name": "Poster in Art Nouveau Style",
+    "input": "Subir una referencia visual",
+    "prompt": "Design an art nouveau style poster inspired by this image, flowing lines, decorative patterns.",
+    "prompt_es": "Diseña un póster al estilo art nouveau inspirado en esta imagen, con líneas fluidas y patrones decorativos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case44/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case44/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 45",
+    "name": "Generate 3D Floor Plan",
+    "input": "Subir un plano arquitectónico",
+    "prompt": "Turn this architectural floor plan into a 3D model render, top-down view with textures.",
+    "prompt_es": "Convierte este plano arquitectónico en un render de modelo 3D, vista cenital con texturas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case45/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case45/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 46",
+    "name": "Tattoo Design from Image",
+    "input": "Subir una foto de referencia",
+    "prompt": "Create a black and white tattoo design inspired by this image, sharp lines, minimal shading.",
+    "prompt_es": "Crea un diseño de tatuaje en blanco y negro inspirado en esta imagen, con líneas definidas y sombreado mínimo.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case46/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case46/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 47",
+    "name": "Futuristic City Poster",
+    "input": "Subir una foto de ciudad",
+    "prompt": "Make a futuristic city poster, neon lights, flying cars, sci-fi vibes.",
+    "prompt_es": "Haz un póster de ciudad futurista, con luces de neón, autos voladores y ambiente de ciencia ficción.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case47/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case47/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 48",
+    "name": "Fantasy Book Cover",
+    "input": "Subir una referencia de personaje o lugar",
+    "prompt": "Design a fantasy book cover based on this concept, epic scenery, magical elements.",
+    "prompt_es": "Diseña una portada de libro de fantasía basada en este concepto, con paisajes épicos y elementos mágicos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case48/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case48/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 49",
+    "name": "Generate Low-Fi Aesthetic Art",
+    "input": "Subir una foto de ambiente o retrato",
+    "prompt": "Convert this image into low-fi aesthetic illustration, muted colors, retro vibes.",
+    "prompt_es": "Convierte esta imagen en una ilustración estética low-fi, con colores apagados y ambiente retro.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case49/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case49/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 50",
+    "name": "Logo Redesign",
+    "input": "Subir un logotipo existente",
+    "prompt": "Redesign this logo in a modern flat style, minimal colors, clean lines.",
+    "prompt_es": "Rediseña este logotipo en un estilo plano moderno, con colores mínimos y líneas limpias.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case50/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case50/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 52",
+    "name": "Turn Landscape into Watercolor Painting",
+    "input": "Subir una foto de paisaje",
+    "prompt": "Convert this landscape photo into a watercolor painting, soft brushstrokes, pastel tones.",
+    "prompt_es": "Convierte esta foto de paisaje en una pintura en acuarela, con pinceladas suaves y tonos pastel.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case52/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case52/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 53",
+    "name": "Sci-Fi Character Concept",
+    "input": "Subir una referencia de persona",
+    "prompt": "Redesign this person as a sci-fi character, futuristic armor, glowing elements.",
+    "prompt_es": "Rediseña a esta persona como un personaje de ciencia ficción, con armadura futurista y elementos brillantes.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case53/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case53/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 54",
+    "name": "Create Pop Art Poster",
+    "input": "Subir una foto de referencia",
+    "prompt": "Transform this image into a pop art style poster, bold colors, comic-like shading.",
+    "prompt_es": "Transforma esta imagen en un póster estilo pop art, con colores llamativos y sombreado tipo cómic.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case54/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case54/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 55",
+    "name": "Turn Building into Castle",
+    "input": "Subir una foto de edificio",
+    "prompt": "Transform this building into a medieval castle, stone walls, towers, flags.",
+    "prompt_es": "Transforma este edificio en un castillo medieval, con muros de piedra, torres y banderas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case55/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case55/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 56",
+    "name": "Generate Isometric Room",
+    "input": "Subir una referencia de interior",
+    "prompt": "Design an isometric room based on this photo, stylized and colorful.",
+    "prompt_es": "Diseña una habitación isométrica basada en esta foto, estilizada y colorida.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case56/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case56/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 57",
+    "name": "Animal as Samurai Warrior",
+    "input": "Subir una foto de animal",
+    "prompt": "Redesign this animal as a samurai warrior, armor, sword, traditional Japanese setting.",
+    "prompt_es": "Rediseña este animal como un guerrero samurái, con armadura, espada y ambientación tradicional japonesa.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case57/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case57/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 58",
+    "name": "Poster with Retro Futurism Style",
+    "input": "Subir una imagen de referencia",
+    "prompt": "Create a retro futurism style poster inspired by this image, neon grids, 80s vibes.",
+    "prompt_es": "Crea un póster de estilo retro futurista inspirado en esta imagen, con rejillas de neón y ambiente ochentero.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case58/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case58/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 60",
+    "name": "Generate Steampunk Gadget",
+    "input": "Subir una foto de objeto",
+    "prompt": "Redesign this object as a steampunk gadget, gears, brass, steam pipes.",
+    "prompt_es": "Rediseña este objeto como un dispositivo steampunk, con engranajes, latón y tubos de vapor.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case60/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case60/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 61",
+    "name": "Children’s Book Illustration",
+    "input": "Subir una escena o personaje",
+    "prompt": "Illustrate this scene as a children’s book page, soft colors, playful style.",
+    "prompt_es": "Ilustra esta escena como una página de libro infantil, con colores suaves y estilo juguetón.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case61/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case61/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 62",
+    "name": "Turn Car into Monster Truck",
+    "input": "Subir una foto de automóvil",
+    "prompt": "Transform this car into a monster truck, giant wheels, aggressive look.",
+    "prompt_es": "Transforma este automóvil en un monster truck, con ruedas gigantes y aspecto agresivo.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case62/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case62/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 63",
+    "name": "Album Art in Vaporwave Style",
+    "input": "Subir una referencia temática",
+    "prompt": "Design vaporwave style album art, pastel tones, greek statues, glitch effects.",
+    "prompt_es": "Diseña un arte de álbum en estilo vaporwave, con tonos pastel, estatuas griegas y efectos glitch.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case63/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case63/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 64",
+    "name": "Furniture as Origami",
+    "input": "Subir una foto de mueble",
+    "prompt": "Redesign this furniture piece as if it were made of folded origami paper.",
+    "prompt_es": "Rediseña este mueble como si estuviera hecho de papel de origami plegado.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case64/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case64/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 65",
+    "name": "Generate Stained Glass Art",
+    "input": "Subir una referencia de imagen",
+    "prompt": "Transform this image into stained glass artwork, vibrant colors, light effects.",
+    "prompt_es": "Transforma esta imagen en una obra de vitrales, con colores vibrantes y efectos de luz.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case65/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case65/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 66",
+    "name": "Pet Portrait as Royal Painting",
+    "input": "Subir una foto de mascota",
+    "prompt": "Turn this pet into a royal portrait, dressed in kingly clothes, oil painting style.",
+    "prompt_es": "Convierte esta mascota en un retrato real, vestida con ropas de rey, estilo pintura al óleo.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case66/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case66/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 67",
+    "name": "Generate Cybernetic Organism",
+    "input": "Subir una foto de persona o animal",
+    "prompt": "Transform this subject into a cybernetic organism, robotic implants, glowing circuits.",
+    "prompt_es": "Transforma este sujeto en un organismo cibernético, con implantes robóticos y circuitos brillantes.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case67/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case67/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 68",
+    "name": "Turn Food into Architectural Structure",
+    "input": "Subir una foto de comida",
+    "prompt": "Design an architectural building inspired by this food, edible textures, creative design.",
+    "prompt_es": "Diseña un edificio arquitectónico inspirado en esta comida, con texturas comestibles y diseño creativo.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case68/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case68/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 69",
+    "name": "Tattoo Flash Sheet",
+    "input": "Subir varios objetos o símbolos de referencia",
+    "prompt": "Generate a tattoo flash sheet inspired by these objects, linework style, black ink.",
+    "prompt_es": "Genera una hoja de tatuajes flash inspirada en estos objetos, estilo de líneas, tinta negra.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case69/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case69/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 70",
+    "name": "Generate Art Deco Poster",
+    "input": "Subir una referencia de diseño",
+    "prompt": "Create an art deco style poster from this concept, geometric patterns, metallic tones.",
+    "prompt_es": "Crea un póster de estilo art déco a partir de este concepto, con patrones geométricos y tonos metálicos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case70/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case70/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 72",
+    "name": "Graffiti Wall Art",
+    "input": "Subir una foto de muro o edificio",
+    "prompt": "Turn this wall into a graffiti mural, vibrant colors, street art style.",
+    "prompt_es": "Convierte este muro en un mural de graffiti, con colores vibrantes y estilo arte urbano.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case72/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case72/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 73",
+    "name": "Turn Building into Sci-Fi Structure",
+    "input": "Subir una foto de edificio",
+    "prompt": "Transform this building into a sci-fi structure, metallic surfaces, neon accents.",
+    "prompt_es": "Transforma este edificio en una estructura de ciencia ficción, con superficies metálicas y acentos de neón.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case73/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case73/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 74",
+    "name": "Generate Character Trading Card",
+    "input": "Subir una imagen de personaje",
+    "prompt": "Make a trading card design for this character, fantasy theme, stats layout.",
+    "prompt_es": "Haz un diseño de carta coleccionable para este personaje, con tema de fantasía y distribución de estadísticas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case74/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case74/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 75",
+    "name": "Turn Portrait into Marble Bust",
+    "input": "Subir un retrato de persona",
+    "prompt": "Convert this portrait into a marble bust sculpture, realistic carving details.",
+    "prompt_es": "Convierte este retrato en un busto de mármol, con detalles de tallado realistas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case75/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case75/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 76",
+    "name": "Design Prop for Movie",
+    "input": "Subir un objeto de referencia",
+    "prompt": "Redesign this object as a prop for a fantasy movie, cinematic lighting, dramatic presentation.",
+    "prompt_es": "Rediseña este objeto como un accesorio para una película de fantasía, con iluminación cinematográfica y presentación dramática.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case76/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case76/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 77",
+    "name": "Generate Futuristic Weapon",
+    "input": "Subir una referencia de objeto",
+    "prompt": "Transform this object into a futuristic weapon design, glowing energy core, sci-fi aesthetic.",
+    "prompt_es": "Transforma este objeto en un diseño de arma futurista, con núcleo de energía brillante y estética de ciencia ficción.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case77/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case77/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 78",
+    "name": "Generate Tarot Card Illustration",
+    "input": "Subir una imagen de referencia",
+    "prompt": "Create a tarot card illustration of this character, mystical style, ornate frame.",
+    "prompt_es": "Crea una ilustración de carta de tarot de este personaje, estilo místico, marco ornamentado.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case78/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case78/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 79",
+    "name": "Food as Architecture Model",
+    "input": "Subir una foto de comida",
+    "prompt": "Turn this food into a scale model of a building, edible textures, playful design.",
+    "prompt_es": "Convierte esta comida en una maqueta de edificio, con texturas comestibles y diseño juguetón.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case79/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case79/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 80",
+    "name": "Generate Minimalist Poster",
+    "input": "Subir una imagen de referencia",
+    "prompt": "Design a minimalist poster inspired by this concept, clean lines, simple colors.",
+    "prompt_es": "Diseña un póster minimalista inspirado en este concepto, con líneas limpias y colores simples.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case80/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case80/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 81",
+    "name": "Generate Futuristic Architecture",
+    "input": "Subir una foto de edificio",
+    "prompt": "Redesign this building into futuristic architecture, glass domes, neon accents.",
+    "prompt_es": "Rediseña este edificio en arquitectura futurista, con cúpulas de vidrio y acentos de neón.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case81/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case81/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 82",
+    "name": "Generate Fantasy Creature",
+    "input": "Subir un animal de referencia",
+    "prompt": "Transform this animal into a fantasy creature, wings, horns, glowing eyes.",
+    "prompt_es": "Transforma este animal en una criatura de fantasía, con alas, cuernos y ojos brillantes.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case82/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case82/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 83",
+    "name": "Generate Minimal Vector Logo",
+    "input": "Subir una referencia de logotipo",
+    "prompt": "Simplify and redesign this logo into a minimal vector style, flat colors.",
+    "prompt_es": "Simplifica y rediseña este logotipo en un estilo vectorial minimalista, con colores planos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case83/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case83/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 84",
+    "name": "Generate Illustrated Cookbook Page",
+    "input": "Subir una receta o ingredientes",
+    "prompt": "Design a cookbook page with illustrated ingredients and step-by-step visuals.",
+    "prompt_es": "Diseña una página de libro de cocina con ingredientes ilustrados y pasos visuales.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case84/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case84/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 85",
+    "name": "Generate Isometric City Block",
+    "input": "Subir una foto urbana",
+    "prompt": "Create an isometric city block illustration based on this photo, colorful and detailed.",
+    "prompt_es": "Crea una ilustración de una manzana urbana en isométrico basada en esta foto, colorida y detallada.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case85/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case85/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 86",
+    "name": "Generate Retro Travel Poster",
+    "input": "Subir una referencia de lugar",
+    "prompt": "Design a retro travel poster for this location, vintage typography, bold colors.",
+    "prompt_es": "Diseña un póster retro de viaje para este lugar, con tipografía vintage y colores llamativos.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case86/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case86/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 87",
+    "name": "Generate Board Game Board",
+    "input": "Subir un concepto de juego",
+    "prompt": "Create a board game board design based on this concept, colorful and playable layout.",
+    "prompt_es": "Crea un diseño de tablero de juego de mesa basado en este concepto, con disposición colorida y jugable.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case87/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case87/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 88",
+    "name": "Turn Portrait into Mosaic Art",
+    "input": "Subir un retrato",
+    "prompt": "Convert this portrait into a mosaic artwork, small colorful tiles.",
+    "prompt_es": "Convierte este retrato en una obra de mosaico, con pequeñas baldosas coloridas.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case88/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case88/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 89",
+    "name": "Generate Illustrated Tarot Deck",
+    "input": "Subir varios personajes de referencia",
+    "prompt": "Design a tarot card deck with these characters, mystical style, ornate frames.",
+    "prompt_es": "Diseña una baraja de cartas de tarot con estos personajes, estilo místico y marcos ornamentados.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case89/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case89/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 90",
+    "name": "Generate Fantasy Game Cover",
+    "input": "Subir una referencia de personaje o ambiente",
+    "prompt": "Design a fantasy video game cover art based on this theme, epic style.",
+    "prompt_es": "Diseña una portada de videojuego de fantasía basada en este tema, estilo épico.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case90/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case90/output.jpg"
+      }
+    ]
+  },
+  {
+    "id": "case 91",
+    "name": "Generate Comic Page",
+    "input": "Subir un guion o escena de referencia",
+    "prompt": "Create a comic book page based on this scene, panels, speech bubbles, dynamic style.",
+    "prompt_es": "Crea una página de cómic basada en esta escena, con viñetas, bocadillos de diálogo y estilo dinámico.",
+    "imagenes": [
+      {
+        "input": "public/Awesome-Nano-Banana-images-main/images/case91/input.jpg",
+        "output": "public/Awesome-Nano-Banana-images-main/images/case91/output.jpg"
+      }
+    ]
+  }
+]

@@ -98,8 +98,11 @@ ZoraGenix/
 - **Vista previa en tiempo real**
 - **Descarga directa de resultados**
 - **Metadatos detallados**
-- **UI responsive**
-- **Manejo robusto de errores**
+- ✅ UI responsive con Tailwind CSS
+- ✅ Manejo robusto de errores
+- ✅ 🆕 Exploración de Prompts con galería interactiva
+- ✅ 🆕 Editor de Prompts avanzado con sugerencias
+- ✅ 🆕 10+ prompts predefinidos de la comunidad
 
 ## 🐛 Solución de Problemas
 

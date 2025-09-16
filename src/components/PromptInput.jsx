@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const PromptInput = ({ onGenerate, isGenerating, hasImage, isConnected }) => {
-  const [prompt, setPrompt] = useState('');
-  const [charCount, setCharCount] = useState(0);
+const PromptInput = ({
+  onGenerate,
+  isGenerating,
+  hasImage,
+  isConnected,
+  initialPrompt = '',
+  onPromptChange
+}) => {
+  const [prompt, setPrompt] = useState(initialPrompt);
+  const [charCount, setCharCount] = useState(initialPrompt.length);
   const maxChars = 2000;
+
+  // Actualizar prompt cuando cambie el inicial
+  useEffect(() => {
+    setPrompt(initialPrompt);
+    setCharCount(initialPrompt.length);
+  }, [initialPrompt]);
 
   const handlePromptChange = (e) => {
     const value = e.target.value;
     if (value.length <= maxChars) {
       setPrompt(value);
       setCharCount(value.length);
+      if (onPromptChange) {
+        onPromptChange(value);
+      }
     }
   };
 
@@ -33,6 +49,9 @@ const PromptInput = ({ onGenerate, isGenerating, hasImage, isConnected }) => {
   const handleExampleClick = (example) => {
     setPrompt(example);
     setCharCount(example.length);
+    if (onPromptChange) {
+      onPromptChange(example);
+    }
   };
 
   return (
@@ -51,7 +70,7 @@ const PromptInput = ({ onGenerate, isGenerating, hasImage, isConnected }) => {
               id="prompt"
               value={prompt}
               onChange={handlePromptChange}
-              placeholder={hasImage 
+              placeholder={hasImage
                 ? "Ej: Cambia el fondo por un paisaje de montañas, mejora la iluminación..."
                 : "Ej: Un gato naranja con ojos verdes sentado en un sofá..."
               }
@@ -99,8 +118,8 @@ const PromptInput = ({ onGenerate, isGenerating, hasImage, isConnected }) => {
         )}
       </form>
 
-      {/* Ejemplos de prompts */}
-      {!isGenerating && (
+      {/* Ejemplos de prompts - solo mostrar si no hay prompt inicial */}
+      {!isGenerating && !initialPrompt && (
         <div className="mt-6">
           <h3 className="text-sm font-medium text-gray-900 mb-3">
             {hasImage ? 'Ejemplos de edición:' : 'Ejemplos de prompts:'}
