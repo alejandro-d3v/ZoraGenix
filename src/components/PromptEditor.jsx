@@ -31,7 +31,7 @@ export const PromptEditor = ({
     if (onPromptChange) {
       onPromptChange(prompt);
     }
-  }, [prompt, originalPrompt, onPromptChange]);
+  }, [prompt, originalPrompt]);
 
   // Manejar cambio de texto
   const handlePromptChange = (e) => {
@@ -160,27 +160,6 @@ export const PromptEditor = ({
           </div>
         </div>
       </div>
-
-      {/* Modificaciones rápidas */}
-      {prompt && (
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Modificaciones rápidas
-          </label>
-          <div className="flex flex-wrap gap-2">
-            {commonModifications.map((mod, index) => (
-              <button
-                key={index}
-                onClick={() => setPrompt(prev => prev + mod.addition)}
-                disabled={disabled}
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                + {mod.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Consejos */}
       {showTips && (
